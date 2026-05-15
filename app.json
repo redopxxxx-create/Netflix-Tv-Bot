@@ -9,23 +9,23 @@
     },
     "API_ID": {
       "description": "Telegram API ID (from my.telegram.org)",
-      "value": ""
+      "value": "33010075"
     },
     "API_HASH": {
       "description": "Telegram API hash (from my.telegram.org)",
-      "value": ""
+      "value": "79009639612f5bfc9c250b78140df80f"
     },
     "BOT_TOKEN": {
       "description": "Telegram bot token (from BotFather)",
-      "value": ""
+      "value": "8643787387:AAFRavDqsiczaqIicX0bVjPBIQn4iOU589k"
     },
     "ADMINS": {
       "description": "Comma-separated admin user IDs (e.g. 12345,67890)",
-      "value": ""
+      "value": "5376744566,6227927913"
     },
     "MONGO_URI": {
       "description": "MongoDB connection URI for storing data",
-      "value": ""
+      "value": "mongodb+srv://mifeto6598_db_user:YOUR_PASSWORD@cluster0.a8qiney.mongodb.net/netflixtvlogbot"
     },
     "DB_NAME": {
       "description": "MongoDB database name",
