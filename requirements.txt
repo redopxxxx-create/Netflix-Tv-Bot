@@ -1,0 +1,7 @@
+pyrofork
+tgcrypto
+requests
+motor
+pymongo
+Flask
+gunicorn
