@@ -1,0 +1,12 @@
+{
+  "name": "Netflix-Tv-Bot",
+  "description": "Template repo prepared for Heroku deployment.",
+  "repository": "",
+  "stack": "container",
+  "env": {
+    "PORT": {
+      "description": "Port for the web process (Heroku sets this automatically)",
+      "value": "5000"
+    }
+  }
+}
