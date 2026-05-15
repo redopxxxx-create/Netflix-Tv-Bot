@@ -6,6 +6,46 @@
     "PORT": {
       "description": "Port for the web process (Heroku sets this automatically)",
       "value": "5000"
+    },
+    "API_ID": {
+      "description": "Telegram API ID (from my.telegram.org)",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Telegram API hash (from my.telegram.org)",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "Telegram bot token (from BotFather)",
+      "value": ""
+    },
+    "ADMINS": {
+      "description": "Comma-separated admin user IDs (e.g. 12345,67890)",
+      "value": ""
+    },
+    "MONGO_URI": {
+      "description": "MongoDB connection URI for storing data",
+      "value": ""
+    },
+    "DB_NAME": {
+      "description": "MongoDB database name",
+      "value": "netflixtvlogbot"
+    },
+    "MAX_THREADS": {
+      "description": "Maximum concurrent threads for processing",
+      "value": "50"
+    },
+    "FORCE_SUB_CHANNEL": {
+      "description": "Force-subscribe channel config (Name:ID or Name:ID:invite_link)",
+      "value": "Join Channel:-1003910786672"
+    },
+    "FORCE_SUB_TEXT": {
+      "description": "Message shown to users who must join channels",
+      "value": "<b>⚠️ You must join our channels to use this bot!</b>\n\nPlease join the channels below and click REFRESH."
+    },
+    "LOG_CHANNEL": {
+      "description": "Chat ID where logs are sent (negative for supergroups)",
+      "value": "-1003910786672"
     }
   }
 }

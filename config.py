@@ -1,3 +1,5 @@
+import os
+
 # List of random images (must be a list, not a tuple)
 PICS = (
     "https://spiritcat122.github.io/Images/p/14822.jpg",
@@ -44,28 +46,28 @@ PICS = (
     "https://ik.imagekit.io/jbxs2z512/1386555.jpg?updatedAt=1760518403026"
 )
 
-# Telegram API credentials (fill with your actual values)
-API_ID = 33010075    # replace with your API ID
-API_HASH = "79009639612f5bfc9c250b78140df80f"       # replace with your API hash
-BOT_TOKEN = "8643787387:AAFRavDqsiczaqIicX0bVjPBIQn4iOU589k"      # replace with your bot token
+# Telegram API credentials (read from env or fallback to existing values)
+API_ID = int(os.getenv("API_ID", "33010075"))
+API_HASH = os.getenv("API_HASH", "79009639612f5bfc9c250b78140df80f")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8643787387:AAFRavDqsiczaqIicX0bVjPBIQn4iOU589k")
 
-# Admin IDs (list of integers)
-ADMINS = [5376744566,6227927913]
+# Admin IDs (comma-separated env var, fallback to hardcoded list)
+_admins_env = os.getenv("ADMINS", "5376744566,6227927913")
+ADMINS = [int(x) for x in _admins_env.split(",") if x.strip()]
 
 # MongoDB configuration
-MONGO_URI = "mongodb+srv://mifeto6598_db_user:YOUR_PASSWORD@cluster0.a8qiney.mongodb.net/netflixtvlogbot"
-DB_NAME = "netflixtvlogbot"
+MONGO_URI = os.getenv("MONGO_URI", "mongodb+srv://mifeto6598_db_user:YOUR_PASSWORD@cluster0.a8qiney.mongodb.net/netflixtvlogbot")
+DB_NAME = os.getenv("DB_NAME", "netflixtvlogbot")
 
 # Thread configuration
-MAX_THREADS = 50
+MAX_THREADS = int(os.getenv("MAX_THREADS", "50"))
 
 # Force Subscribe configuration
 # Format: "Channel Name:ChannelID" (optional invite link after a colon)
-# Now using the same channel as LOG_CHANNEL
-FORCE_SUB_CHANNEL = "Join Channel:-1003910786672"
+FORCE_SUB_CHANNEL = os.getenv("FORCE_SUB_CHANNEL", "Join Channel:-1003910786672")
 
 # Force Subscribe message
-FORCE_SUB_TEXT = "<b>⚠️ You must join our channels to use this bot!</b>\n\nPlease join the channels below and click REFRESH."
+FORCE_SUB_TEXT = os.getenv("FORCE_SUB_TEXT", "<b>⚠️ You must join our channels to use this bot!</b>\n\nPlease join the channels below and click REFRESH.")
 
 # Log channel for errors (must be an integer, with negative sign for supergroups)
-LOG_CHANNEL = -1003910786672
+LOG_CHANNEL = int(os.getenv("LOG_CHANNEL", "-1003910786672"))
